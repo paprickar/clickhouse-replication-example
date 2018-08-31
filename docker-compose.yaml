@@ -7,7 +7,7 @@ services:
       - ./macros1.xml:/etc/clickhouse-server/config.d/macros.xml
       - ./data/1:/var/lib/clickhouse
     ports:
-      - 8123:8123
+      - 127.0.0.1:8123:8123
   ch-server-2:
     image: yandex/clickhouse-server
     volumes:
@@ -28,4 +28,3 @@ services:
       - infinity
   zookeeper:
     image: zookeeper
-
